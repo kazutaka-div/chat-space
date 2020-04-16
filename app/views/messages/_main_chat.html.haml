@@ -7,7 +7,7 @@
     = link_to "#" do
       .main-chat__group-info__edit
         Edit
-        
+
   .main-chat__message-list
     .main-chat__message-list__box
       .main-chat__message-list__box__user-day
@@ -19,3 +19,10 @@
         おはよう！
     
   .main-chat__message-form
+    %form{class:"main-chat__message-form__box"}
+      .main-chat__message-form__box__input
+        %input{placeholder:"type a message" , type:"text" , class:"main-chat__message-form__box__input__message"}
+        %label{class: "main-chat__message-form__box__input__image"}
+          = icon('fa', 'image')
+          %input{type: "file" , class:"main-chat__message-form__box__input__image__file"}
+      %input{type:"submit" , value:"Send" , class:"main-chat__message-form__box__submit"}
