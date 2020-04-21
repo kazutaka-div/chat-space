@@ -7,4 +7,5 @@
   .main-chat__message-list__box__message
     - if message.content.present?
       = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    .main-chat__message-list__box__message__image
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
